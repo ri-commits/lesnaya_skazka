@@ -1,7 +1,8 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Pattaya } from "next/font/google";
+import Baner from "@/components/Baner";
 
-const inter = Inter({ subsets: ["latin"] });
+const font = Pattaya({ subsets: ["latin"], weight: ["400"] });
 
 export const metadata = {
   title: "Агроусадьба Лесная Сказка",
@@ -11,7 +12,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ru">
-      <body className={inter.className}>{children}</body>
+      <body className={font.className}>
+        <Baner />
+
+        {children}
+      </body>
     </html>
   );
 }
