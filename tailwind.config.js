@@ -10,6 +10,8 @@ module.exports = {
       fontFamily: {
         pattaya: ["var(--font-sans-serif)"],
         amatic: ["var(--font-cursive)"],
+        caveat: ["var(--font-heading)"],
+        merri: ["var(--font-normal)"],
       },
     },
   },

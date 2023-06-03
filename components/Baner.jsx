@@ -20,7 +20,7 @@ const Baner = () => {
         {links.map((link) => (
           <Link
             href="#"
-            className="font-amatic text-fuchsia-95 sm:text-2xl text-xl tracking-wide px-3 hover:underline"
+            className="font-amatic  sm:text-2xl text-xl tracking-wide px-3 hover:underline"
           >
             {link}
           </Link>
