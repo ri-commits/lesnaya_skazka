@@ -1,8 +1,18 @@
 import "./globals.css";
-import { Pattaya } from "next/font/google";
 import Baner from "@/components/Baner";
+import { Pattaya, Amatic_SC } from "next/font/google";
 
-const font = Pattaya({ subsets: ["latin"], weight: ["400"] });
+const pattaya = Pattaya({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-sans-serif",
+});
+
+const amatic = Amatic_SC({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-cursive",
+});
 
 export const metadata = {
   title: "Агроусадьба Лесная Сказка",
@@ -11,8 +21,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="ru">
-      <body className={font.className}>
+    <html lang="ru" className={`${pattaya.variable} ${amatic.variable}`}>
+      <body>
         <Baner />
 
         {children}
