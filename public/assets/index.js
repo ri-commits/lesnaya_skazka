@@ -1,4 +1,4 @@
-import rassvet from "./rassvet.webp";
+import rassvet from "./rassvet.jpg";
 import arch from "./arch.jpg";
 import ded from "./ded.jpg";
 import zubr from "./zubr.jpg";
