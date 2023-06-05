@@ -41,7 +41,7 @@ const ImageSlider = () => {
   let sliderRef;
 
   return (
-    <div className=" p-3 bg-neutral-100">
+    <div className=" p-3 pb-12 bg-neutral-100">
       <div className="font-caveat flex flex-col justify-center items-center p-5 text-gray-800">
         <h1 className="md:text-8xl text-7xl ">То что нас окружает</h1>
         <div className="flex gap-10 pt-2 text-2xl">

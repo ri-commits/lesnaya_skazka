@@ -4,7 +4,10 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div className="relative w-full h-full flex items-end justify-center">
+    <div
+      className="relative w-full h-full flex items-end justify-center"
+      id="header"
+    >
       <video autoPlay playsInline loop muted className="w-full h-full z-[-1]">
         <source
           type="video/mp4"
