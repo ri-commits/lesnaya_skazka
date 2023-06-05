@@ -41,6 +41,7 @@ const Baner = () => {
           <Link
             href="#"
             className="font-amatic  sm:text-2xl text-xl tracking-wide px-3 hover:underline"
+            key={link}
           >
             {link}
           </Link>

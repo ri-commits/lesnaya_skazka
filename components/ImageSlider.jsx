@@ -59,6 +59,7 @@ const ImageSlider = () => {
               width={1080}
               height={1320}
               className="w-full px-1"
+              key={`Image ${index + 1}`}
             />
           ))}
         </Slider>
