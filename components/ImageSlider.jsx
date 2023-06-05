@@ -9,17 +9,6 @@ import images from "../public/assets/index.js";
 import Image from "next/image.js";
 
 const ImageSlider = () => {
-  useEffect(() => {
-    const interval = setInterval(() => {
-      // Function to slide to the next image
-      sliderRef.slickNext();
-    }, 3000);
-
-    return () => {
-      clearInterval(interval);
-    };
-  }, []);
-
   const settings = {
     dots: false,
     infinite: true,

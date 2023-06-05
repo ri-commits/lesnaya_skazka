@@ -9,17 +9,6 @@ import services from "../public/assets/services/index.js";
 import Image from "next/image.js";
 
 const Services = () => {
-  useEffect(() => {
-    const interval = setInterval(() => {
-      // Function to slide to the next image
-      sliderRef.slickNext();
-    }, 3000);
-
-    return () => {
-      clearInterval(interval);
-    };
-  }, []);
-
   const settings = {
     dots: false,
     infinite: true,
@@ -32,7 +21,7 @@ const Services = () => {
       {
         breakpoint: 640,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
         },
       },
     ],
@@ -41,19 +30,14 @@ const Services = () => {
   let sliderRef;
 
   return (
-    <div className=" p-3 pb-12 bg-neutral-100">
+    <div className="  pb-12 bg-neutral-100">
       <div className="font-caveat flex flex-col justify-center items-center p-5 text-gray-800">
-        <h1 className="md:text-8xl text-7xl ">То что нас окружает</h1>
-        <div className="flex gap-10 pt-2 text-2xl">
-          <p>природа</p>
-          <p>умиратворение</p>
-          <p>сказка</p>
-        </div>
+        <h1 className="md:text-8xl text-7xl ">Все что нужно</h1>
       </div>
       <div className="relative">
         <Slider {...settings} ref={(ref) => (sliderRef = ref)}>
           {Object.values(services).map((service, index) => (
-            <div>
+            <div className="flex flex-col justify-center items-center gap-3 border p-3 bg-white shadow">
               <Image
                 src={service.image}
                 alt={`Image ${index + 1}`}
@@ -62,7 +46,11 @@ const Services = () => {
                 className="w-full px-1"
                 key={`Image ${index + 1}`}
               />
-              <p>{service.name}</p>
+              <div className="flex flex-col justify-center items-center gap-3 pt-3 text-3xl">
+                <h3 className=" font-caveat text-gray-800 self-center ">
+                  {service.name}
+                </h3>
+              </div>
             </div>
           ))}
         </Slider>
