@@ -42,7 +42,7 @@ const Services = () => {
                 src={service.image}
                 alt={`Image ${index + 1}`}
                 width={500}
-                height={500}
+                height={450}
                 className="w-full px-1"
                 key={`Image ${index + 1}`}
               />

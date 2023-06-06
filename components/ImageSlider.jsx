@@ -45,8 +45,8 @@ const ImageSlider = () => {
             <Image
               src={image}
               alt={`Image ${index + 1}`}
-              width={1080}
-              height={1320}
+              width={400}
+              height={600}
               className="w-full px-1"
               key={`Image ${index + 1}`}
             />

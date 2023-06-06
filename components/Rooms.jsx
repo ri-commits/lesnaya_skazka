@@ -29,8 +29,8 @@ const Room = ({ image, description, reverse }) => {
         <Image
           src={image}
           alt="Room"
-          width={1080}
-          height={1320}
+          width={800}
+          height={700}
           className="w-full"
         />
       </div>
