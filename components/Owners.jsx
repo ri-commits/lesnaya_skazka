@@ -11,7 +11,10 @@ const Owners = () => {
   };
 
   return (
-    <div className="flex m-5 justify-center flex-col items-center p-5 text-gray-800 ">
+    <div
+      className="flex m-5 justify-center flex-col items-center p-5 text-gray-800 "
+      id="history"
+    >
       <h1 className="md:text-8xl text-7xl font-caveat ">Немного о нас</h1>
       <h2 className=" self-end font-caveat md:text-3xl text-2xl pr-7">
         Наталья и Андрей

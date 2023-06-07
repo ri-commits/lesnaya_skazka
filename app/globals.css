@@ -2,34 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-  .outlinee {
-    @apply text-white;
-    text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.7),
-      1px -1px 0 rgba(255, 255, 255, 0.7), -1px 1px 0 rgba(255, 255, 255, 0.7),
-      1px 1px 0 rgba(255, 255, 255, 0.7);
-  }
-}
-
-@layer utilities {
-  @supports ((text-stroke: 2px black) or (-webkit-text-stroke: 2px black)) {
-    .outlinee {
-      @apply text-transparent;
-      -webkit-text-stroke: 2px rgba(255, 255, 255, 0.7);
-      text-stroke: 2px rgba(255, 255, 255, 0.7);
-      text-shadow: none;
-    }
-  }
-}
-
-.outline_btn {
-  @apply rounded-2xl border border-white bg-transparent  py-1.5 px-5 text-white transition-all  text-center text-sm  flex items-center justify-center;
-}
-
-.orange_gradient {
-  @apply bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500;
-}
-
-.h1-hover:hover ~ .hover\:h1-hover {
-  color: white;
+html {
+  --scroll-behavior: smooth !important;
+  scroll-behavior: smooth !important;
 }

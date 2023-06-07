@@ -30,7 +30,7 @@ const Services = () => {
   let sliderRef;
 
   return (
-    <div className="  pb-12 bg-neutral-100">
+    <div className="  pb-12 bg-neutral-100" id="entertaiment">
       <div className="font-caveat flex flex-col justify-center items-center p-5 text-gray-800">
         <h1 className="md:text-8xl text-7xl ">Все что нужно</h1>
       </div>

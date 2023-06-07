@@ -3,7 +3,24 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 
 const Baner = () => {
-  const links = ["ИСТОРИЯ", "УДОБСТВА", "РАЗВЛЕЧЕНИЯ", "ПРОДУКЦИЯ"];
+  const links = [
+    {
+      name: "ИСТОРИЯ",
+      id: "#history",
+    },
+    {
+      name: "УДОБСТВА",
+      id: "#facilities",
+    },
+    {
+      name: "РАЗВЛЕЧЕНИЯ",
+      id: "#entertaiment",
+    },
+    {
+      name: "КОНТАКТ",
+      id: "#contact",
+    },
+  ];
   const [isBannerVisible, setIsBannerVisible] = useState(true);
 
   useEffect(() => {
@@ -39,11 +56,11 @@ const Baner = () => {
       <div className="flex justify-center items-center gap-5 p-3 bg-white">
         {links.map((link) => (
           <Link
-            href="#"
-            className="font-amatic  sm:text-2xl text-xl tracking-wide px-3 hover:underline"
-            key={link}
+            href={link.id}
+            className="font-amatic  sm:text-3xl text-2xl tracking-wide px-3 hover:underline"
+            key={link.id}
           >
-            {link}
+            {link.name}
           </Link>
         ))}
       </div>

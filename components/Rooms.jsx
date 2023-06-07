@@ -24,6 +24,7 @@ const Room = ({ image, description, reverse }) => {
       className={`flex flex-col ${
         reverse ? "md:flex-row-reverse" : "md:flex-row"
       }`}
+      id="facilities"
     >
       <div className="flex-shrink-0 md:w-1/2">
         <Image
