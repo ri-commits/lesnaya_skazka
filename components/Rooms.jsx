@@ -5,7 +5,7 @@ import Link from "next/link.js";
 
 const ReservationButton = () => (
   <Link
-    href="/contacts"
+    href="#contact"
     className="mt-3 group text-gray-800 py-4 md:py-5 px-8 md:px-10 relative overflow-hidden"
   >
     <span

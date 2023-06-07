@@ -1,7 +1,5 @@
 import "./globals.css";
-import Baner from "@/components/Baner";
 import { Pattaya, Amatic_SC, Caveat, Merriweather } from "next/font/google";
-import Footer from "@/components/Footer";
 
 const pattaya = Pattaya({
   subsets: ["latin"],
@@ -38,12 +36,7 @@ export default function RootLayout({ children }) {
       lang="ru"
       className={`${pattaya.variable} ${amatic.variable} ${caveat.variable} ${merri.variable}`}
     >
-      <body>
-        <Baner />
-
-        {children}
-        <Footer />
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

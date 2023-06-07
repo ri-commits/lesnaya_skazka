@@ -31,7 +31,7 @@ const Reviews = () => {
           {Object.values(reviews).map((review) => (
             <div
               key={review.id}
-              className="p-6 m-3 border rounded-md w-full h-auto bg-white"
+              className="p-6 m-3 border rounded-md w-full h-full bg-white"
             >
               <div className="flex justify-between items-start">
                 <div className="flex justify-start items-start gap-3">
