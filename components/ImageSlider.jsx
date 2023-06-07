@@ -7,7 +7,7 @@ import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 import images from "../public/assets/index.js";
 import Image from "next/image.js";
 
-const ImageSlider = () => {
+const ImageSlider = ({ isEnglish }) => {
   const settings = {
     dots: false,
     infinite: true,
@@ -31,11 +31,13 @@ const ImageSlider = () => {
   return (
     <div className=" p-3 pb-12 bg-neutral-100">
       <div className="font-caveat flex flex-col justify-center items-center p-5 text-gray-800">
-        <h1 className="md:text-8xl text-7xl ">То что нас окружает</h1>
+        <h1 className="md:text-8xl text-7xl ">
+          {isEnglish ? `What surrounds us` : `То что нас окружает`}
+        </h1>
         <div className="flex gap-10 pt-2 text-2xl">
-          <p>природа</p>
-          <p>умиратворение</p>
-          <p>сказка</p>
+          <p>{isEnglish ? "nature" : "природа"}</p>
+          <p>{isEnglish ? "appeasement" : "умиратворение"}</p>
+          <p>{isEnglish ? "fairy tale" : "сказка"}</p>
         </div>
       </div>
       <div className="relative">
