@@ -49,18 +49,18 @@ const Baner = ({ onLanguageToggle, isEnglish }) => {
       }`}
     >
       <div className="relative">
-        <h1 className="absolute top-1 left-3 font-amatic text-white text-3xl tracking-wider cursor-pointer font-bold">
+        <h1 className="absolute top-2 left-5 font-amatic text-white text-3xl tracking-wider cursor-pointer font-bold">
           L<span className="font-normal ">|</span>S
         </h1>
         <div
           className="font-pattaya bg-violet-950 text-white flex
-              justify-center items-center p-3 tracking-wider"
+              justify-center items-center p-4 tracking-wider"
         >
           {isEnglish
             ? "Agrousadba Lesnaya Skazka"
             : "Агроусадьба Лесная Сказка"}
         </div>
-        <div className="absolute right-3 top-1">
+        <div className="absolute right-5 top-2">
           <button
             className="font-amatic text-white text-3xl tracking-wider cursor-pointer font-bold"
             onClick={onLanguageToggle}
