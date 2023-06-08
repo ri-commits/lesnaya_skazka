@@ -4,7 +4,7 @@ import React from "react";
 import sotial from "../public/assets/contacts/index.js";
 import map from "../public/assets/map.jpg";
 
-const Footer = () => {
+const Footer = ({ isEnglish }) => {
   const phoneNumber = "+375292296151";
   const googleMapsUrl =
     "https://www.google.com/maps/place/Agrousadba+Lesnaya+Skazka/@52.5792643,23.7377595,15z/data=!4m21!1m11!3m10!1s0x47205ae7c7f062d9:0x974eddf2ee9ddc4d!2sAgrousadba+Lesnaya+Skazka!5m2!4m1!1i2!8m2!3d52.5818635!4d23.7467304!10e7!16s%2Fg%2F11c5btyhc_!3m8!1s0x47205ae7c7f062d9:0x974eddf2ee9ddc4d!5m2!4m1!1i2!8m2!3d52.5818635!4d23.7467304!16s%2Fg%2F11c5btyhc_?entry=ttu";
@@ -29,11 +29,15 @@ const Footer = () => {
     <div id="contact">
       <div className="font-caveat  p-5 text-gray-700">
         <h2 className="md:text-8xl text-7xl ">
-          Пожалуйста свяжитесь с нами для уточнения информации и бронирования
+          {isEnglish
+            ? "Please contact us for more information and booking."
+            : "Пожалуйста свяжитесь с нами для уточнения информации и бронирования"}
         </h2>
       </div>
       <div className="font-caveat  p-5 text-gray-800">
-        <h1 className="md:text-8xl text-7xl ">Контакт ↓</h1>
+        <h1 className="md:text-8xl text-7xl ">
+          {isEnglish ? "Contact" : "Контакт"} ↓
+        </h1>
       </div>
       <div
         className="font-merri bg-violet-950 text-white flex 
@@ -42,13 +46,13 @@ const Footer = () => {
         <div>
           <ul className="pb-5">
             <li className="pb-3 hover:underline">
-              Адрес:{" "}
+              {isEnglish ? "Adres:" : "Адрес:"}{" "}
               <a href={googleMapsUrl}>
                 Деревня Вилы 21, Belaya 224000, Belarus
               </a>
             </li>
             <li className="pb-1 hover:underline">
-              Телефон:{" "}
+              {isEnglish ? "Phone" : "Телефон:"}{" "}
               <a href={`tel:${phoneNumber}`} onClick={handlePhoneClick}>
                 {phoneNumber}
               </a>
@@ -80,7 +84,9 @@ const Footer = () => {
           className="flex flex-col items-center justify-center gap-2
         md:flex-row md:gap-20 md:mr-10"
         >
-          <h2 className=" font-caveat text-4xl md:text-6xl">Карта →</h2>
+          <h2 className=" font-caveat text-4xl md:text-6xl">
+            {isEnglish ? "Map" : "Карта"} →
+          </h2>
           <Image
             src={map}
             width={150}
