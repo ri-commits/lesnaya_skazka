@@ -8,7 +8,7 @@ import reviews from "../public/assets/reviews/index.js";
 import google_image from "../public/assets/reviews/google.png";
 import Image from "next/image.js";
 
-const Reviews = () => {
+const Reviews = ({ isEnglish }) => {
   const settings = {
     dots: false,
     infinite: true,
@@ -24,7 +24,9 @@ const Reviews = () => {
   return (
     <div className=" bg-neutral-100">
       <div className="font-caveat flex flex-col justify-center items-center p-5 text-gray-800">
-        <h1 className="md:text-8xl text-7xl ">То что о нас говорят</h1>
+        <h1 className="md:text-8xl text-7xl ">
+          {isEnglish ? "What is being said about us" : "То что о нас говорят"}
+        </h1>
       </div>
       <div className="relative">
         <Slider {...settings} ref={(ref) => (sliderRef = ref)}>
@@ -58,7 +60,7 @@ const Reviews = () => {
               </div>
               <p className="text-md md:text-xl font-merri text-gray-800 pt-3 tracking-wide">
                 <span className="ml-3"></span>
-                {review.text}
+                {isEnglish ? review.en : review.ru}
               </p>
             </div>
           ))}
