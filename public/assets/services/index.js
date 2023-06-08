@@ -8,32 +8,38 @@ import terassa from "./terassa.jpg";
 export default [
   {
     image: bania,
-    name: "Баня",
+    ru: "Баня",
+    en: "Bathhouse",
     id: "bania",
   },
   {
     image: bania2,
-    name: "Комната отдыха",
+    ru: "Комната отдыха",
+    en: "Rest room",
     id: "bania",
   },
   {
     image: gamak,
-    name: "Гамак под дубом",
+    ru: "Гамак под дубом",
+    en: "Hammock under oak",
     id: "bania",
   },
   {
     image: biesedka,
-    name: "Беседка с барбекю",
+    ru: "Беседка с барбекю",
+    en: "Gazebo with BBQ",
     id: "bania",
   },
   {
     image: shatior,
-    name: "Шатер",
+    ru: "Шатер",
+    en: "Tent",
     id: "bania",
   },
   {
     image: terassa,
-    name: "Терасса",
+    ru: "Терасса",
+    en: "",
     id: "bania",
   },
 ];

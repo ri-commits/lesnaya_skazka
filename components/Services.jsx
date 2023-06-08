@@ -7,7 +7,7 @@ import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 import services from "../public/assets/services/index.js";
 import Image from "next/image.js";
 
-const Services = () => {
+const Services = ({ isEnglish }) => {
   const settings = {
     dots: false,
     infinite: true,
@@ -31,7 +31,9 @@ const Services = () => {
   return (
     <div className="  pb-12 bg-neutral-100" id="entertaiment">
       <div className="font-caveat flex flex-col justify-center items-center p-5 text-gray-800">
-        <h1 className="md:text-8xl text-7xl ">Все что нужно</h1>
+        <h1 className="md:text-8xl text-7xl ">
+          {isEnglish ? "Everything you need" : "Все что нужно"}
+        </h1>
       </div>
       <div className="relative">
         <Slider {...settings} ref={(ref) => (sliderRef = ref)}>
@@ -47,7 +49,7 @@ const Services = () => {
               />
               <div className="flex flex-col justify-center items-center gap-3 pt-3 text-3xl">
                 <h3 className=" font-caveat text-gray-800 self-center ">
-                  {service.name}
+                  {isEnglish ? service.en : service.ru}
                 </h3>
               </div>
             </div>
