@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Pattaya, Amatic_SC, Caveat, Merriweather } from "next/font/google";
+import img from "./opengraph-image.jpg";
 
 const pattaya = Pattaya({
   subsets: ["latin"],
@@ -39,6 +40,30 @@ export const metadata = {
     "Ферма",
     "Отдых на Ферме",
   ],
+  image: {
+    "@type": "ImageObject",
+    url: img,
+    width: 200,
+    height: 200,
+  },
+  review: {
+    "@type": "Review",
+    name: "Незабываеме впечатления",
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: "5",
+      bestRating: "5",
+    },
+    author: {
+      "@type": "Person",
+      name: "Любовь Мамайко",
+    },
+    datePublished: "2022-06-03",
+    reviewBody: `Очень атмосферное и уютное место. От сердца рекомендую. Отдохнули душой и телом.
+    Уютный дом с прекрасным интерьером, настоящая эклетика, но каждая вещи на своем месте. Приятные ароматы в доме, свежее постельное белье. Вкуснейшая домашняя еда и горячая банька. Как может быть еще лушче.
+    Нам повезло, мы попали на период брачного сезона у оленей. Было чудно засыпать под их рев.
+    Благодарю хозяев за уют и теплый прием.`,
+  },
 };
 
 export default function RootLayout({ children }) {
