@@ -69,7 +69,7 @@ const Baner = ({ onLanguageToggle, isEnglish }) => {
           </button>
         </div>
       </div>
-      <div className="flex justify-center items-center md:gap-5 gap-1 p-3 bg-white">
+      <div className="flex justify-center items-center md:gap-5 p-3 bg-white">
         {links.map((link) => (
           <Link
             href={link.id}
